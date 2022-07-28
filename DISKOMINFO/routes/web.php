@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dash/add');
 });
+Route::get('/difabel/list' , [\App\Http\Controllers\DifabelController::class , 'list'])->name('listbarang');
+Route::get('/difabel/add' , [\App\Http\Controllers\DifabelController::class , 'addlist'])->name('add.listbarang');
+
