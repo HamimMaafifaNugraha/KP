@@ -11,7 +11,7 @@
 
 <nav class="main-header navbar navbar-expand navbar-primary navbar-primary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/login"><img src="{{asset('/dinsos.png')}}" style="width :200px;"></a>
+    <a class="navbar-brand" href="/overview"><img src="{{asset('/dinsos.png')}}" style="width :200px;"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
