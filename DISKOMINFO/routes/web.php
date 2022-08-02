@@ -13,13 +13,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('dash/add');
-});
-
-Route::get('/overview', function() {
-    return view('dash/overview');
-});
-Route::get('/difabel/list' , [\App\Http\Controllers\DifabelController::class , 'list'])->name('listbarang');
-Route::get('/difabel/add' , [\App\Http\Controllers\DifabelController::class , 'addlist'])->name('add.listbarang');
-
+//Route CRUD//
+Route::get('/data', [App\Http\Controllers\DataController::class, 'index'])->name('home');

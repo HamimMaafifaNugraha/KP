@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('barang');
             $table->string('pemilik');
             $table->date('tanggal');
-            $table->timestamps();
+            $table->timestamp('created_at')->useCurrent();
+            $table->timestamp('updated_at')->nullable();
         });
     }
 
@@ -29,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('difabels');
+        Schema::dropIfExists('difabel');
     }
 };

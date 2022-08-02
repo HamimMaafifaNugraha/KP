@@ -1,4 +1,4 @@
-@extends('dash.temp')
+@extends('layout.temp')
 
 @section('content')
 

@@ -8,5 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Difabel extends Model
 {
     use HasFactory;
-    protected $table = 'difabels';
+    protected $table = 'difabel';
+    public $timestamps = true;
+
+    protected $fillable = [
+        'barang',
+        'pemilik',
+        'tanggal',
+        'created_at'
+    ];
 }
