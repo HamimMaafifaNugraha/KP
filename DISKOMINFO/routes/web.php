@@ -14,4 +14,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 //Route CRUD//
-Route::get('/data', [App\Http\Controllers\DataController::class, 'index'])->name('home');
+Route::get('/', function () {
+    return redirect('login');
+});
+
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/add', [App\Http\Controllers\HomeController::class, 'add'])->name('add');
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
