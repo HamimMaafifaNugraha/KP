@@ -35,4 +35,14 @@ class HomeController extends Controller
     {
         return view('dash.add');
     }
+
+    public function addpost(Request $request)
+    {
+        $data = new Difabel();
+        $data->barang = $request->barang;
+        $data->pemilik = $request->pemilik;
+        $data->tanggal = $request->tanggal;
+
+        return redirect('add');
+    }
 }
