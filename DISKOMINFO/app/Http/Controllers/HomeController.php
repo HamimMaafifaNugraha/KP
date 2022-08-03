@@ -31,6 +31,11 @@ class HomeController extends Controller
         return view ('dash.index', ['data' => $data]);
     }
 
+    public function home()
+    {
+        return view('dash.index');
+    }
+
     public function add()
     {
         return view('dash.add');
@@ -38,11 +43,11 @@ class HomeController extends Controller
 
     public function addpost(Request $request)
     {
-        $data = new Difabel();
-        $data->barang = $request->barang;
-        $data->pemilik = $request->pemilik;
-        $data->tanggal = $request->tanggal;
-
-        return redirect('add');
+        DB::table('difabels')->insert([
+            'barang'=> $request->barang,
+            'pemilik'=> $request->pemilik,
+            'tanggal'=> $request->tanggal
+        ]);
+        return redirect('/home');
     }
 }
